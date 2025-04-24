@@ -22,7 +22,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.3.1/version>
                 <configuration>
                     <warSourceDirectory>WebContent</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -37,7 +37,10 @@
     <artifactId>commons-io</artifactId>
     <version>2.14.0</version>
 </dependency>
-
-
+<dependency>
+    <groupId>com.webcohesion.enunciate</groupId>
+    <artifactId>enunciate-examples-spring-petclinic</artifactId>
+    <version>2.16.1</version>
+</dependency>
     </dependencies>
 </project>
