@@ -32,9 +32,10 @@ steps:
 - task: JFrogPublishBuildInfo@1
   inputs:
     artifactoryConnection: 'myartnew'
+    collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'devops'
+    includeEnvVars: true 
 - task: JFrogBuildScan@1
   inputs:
     xrayConnection: 'myxray'
