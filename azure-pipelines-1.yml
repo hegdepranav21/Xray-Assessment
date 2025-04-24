@@ -12,7 +12,7 @@ pool:
 steps:
 - task: JFrogToolsInstaller@1
   inputs:
-    artifactoryConnection: 'hts2-new'
+    artifactoryConnection: 'myartnew'
     cliInstallationRepo: 'jfrog-cli-v2-new'
     installCustomVersion: true
     cliVersion: '2.19.0'
@@ -22,22 +22,22 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'install'
-    artifactoryResolverService: 'hts2-new'
-    targetResolveReleaseRepo: 'ad-libs-release'
-    targetResolveSnapshotRepo: 'ad-libs-snapshot'
-    artifactoryDeployService: 'hts2-new'
-    targetDeployReleaseRepo: 'ad-libs-release-local'
-    targetDeploySnapshotRepo: 'ad-libs-snapshot-local'
+    artifactoryResolverService: 'myartnew'
+    targetResolveReleaseRepo: 'azuremvn-libs-release'
+    targetResolveSnapshotRepo: 'azuremvn-libs-snapshot'
+    artifactoryDeployService: 'myartnew'
+    targetDeployReleaseRepo: 'azuremvn-libs-release'
+    targetDeploySnapshotRepo: 'azuremvn-libs-snapshot'
     collectBuildInfo: 'true'
 - task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryConnection: 'hts2-new'
+    artifactoryConnection: 'myartnew'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     projectKey: 'devops'
 - task: JFrogBuildScan@1
   inputs:
-    xrayConnection: 'hts2-xray'
+    xrayConnection: 'myxray'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
