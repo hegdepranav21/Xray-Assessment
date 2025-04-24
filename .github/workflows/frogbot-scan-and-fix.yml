@@ -28,10 +28,10 @@ jobs:
           ref: ${{ matrix.branch }}
 
       # Install prerequisites
-      - name: Setup NodeJS
-        uses: actions/setup-node@v4
-        with:
-          node-version: "16.x"
+      #- name: Setup NodeJS
+       # uses: actions/setup-node@v4
+       # with:
+#          node-version: "16.x"
 
       - uses: jfrog/frogbot@v2
         with:
