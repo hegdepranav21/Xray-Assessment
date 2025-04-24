@@ -36,17 +36,11 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true 
-      
-# Verify if the build is available in Artifactory before scan
-- script: |
-    echo "Checking if build exists in Artifactory..."
-    jf rt curl "/api/build/$(Build.DefinitionName)/$(Build.BuildNumber)"
-  displayName: 'Verify build presence in Artifactory'
 
 - task: JFrogBuildScan@1
   inputs:
     xrayConnection: 'myxray'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: true
+    allowFailBuild: false
     vuln: true
