@@ -37,7 +37,10 @@
     <artifactId>commons-io</artifactId>
     <version>2.6</version>
 </dependency>
-
-
+<dependency>
+<groupId>com.datastax.cassandra</groupId>
+    <artifactId>cassandra-driver-extras</artifactId>
+    <version>3.11.0</version>
+</dependency>
     </dependencies>
 </project>
