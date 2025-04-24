@@ -42,11 +42,3 @@ steps:
     xrayConnection: 'myxray'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: false
-- task: JFrogBuildScan@1
-  inputs:
-    xrayConnection: 'myxray'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: true
-    vuln: true
