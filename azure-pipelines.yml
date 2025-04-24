@@ -28,12 +28,12 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'install'
     options: -DXms=100m -DXmx=10m -DMaxPermSize=10m
-    artifactoryResolverService: 'art2'
-    targetResolveReleaseRepo: 'manu-libs-release'
-    targetResolveSnapshotRepo: 'manu-libs-snapshot'
-    artifactoryDeployService: 'art2'
-    targetDeployReleaseRepo: 'manu-libs-release'
-    targetDeploySnapshotRepo: 'manu-libs-snapshot'
+    artifactoryResolverService: 'adoptionart'
+    targetResolveReleaseRepo: 'azuremvn-libs-release'
+    targetResolveSnapshotRepo: 'azuremvn-libs-snapshot'
+    artifactoryDeployService: 'adoptionart'
+    targetDeployReleaseRepo: 'azuremvn-libs-release'
+    targetDeploySnapshotRepo: 'azuremvn-libs-snapshot'
     collectBuildInfo: true
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
