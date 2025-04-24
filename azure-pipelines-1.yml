@@ -36,6 +36,10 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true 
+    
+# Delay to allow Xray time to index the build info
+- script: echo "Waiting 30 seconds for Xray to index the build..." && sleep 30
+  displayName: 'Delay before Build Scan'
 - task: JFrogBuildScan@1
   inputs:
     xrayConnection: 'myxray'
