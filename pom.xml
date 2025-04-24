@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.testing.jfrog</groupId>
-	<artifactId>gitlab-demo</artifactId>
+	<artifactId>github-demo</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<name>gitlab-demo</name>
-	<description>gitlab-demo</description>
+	<name>github-demo</name>
+	<description>githab-demo</description>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -21,7 +21,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<version>3.3.1</</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
