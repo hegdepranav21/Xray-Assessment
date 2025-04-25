@@ -23,11 +23,11 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'install'
     artifactoryResolverService: 'myartnew'
-    targetResolveReleaseRepo: 'azuremvn-libs-release'
-    targetResolveSnapshotRepo: 'azuremvn-libs-snapshot'
+    targetResolveReleaseRepo: 'azuremvn-maven-remote'
+    targetResolveSnapshotRepo: 'azuremvn-maven-remote'
     artifactoryDeployService: 'myartnew'
-    targetDeployReleaseRepo: 'azuremvn-libs-release'
-    targetDeploySnapshotRepo: 'azuremvn-libs-snapshot'
+    targetDeployReleaseRepo: 'azuremvn-libs-release-local'
+    targetDeploySnapshotRepo: 'azuremvn-libs-release-local'
     collectBuildInfo: 'true'
 - task: JFrogPublishBuildInfo@1
   inputs:
