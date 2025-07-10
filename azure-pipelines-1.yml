@@ -42,3 +42,6 @@ steps:
     xrayConnection: 'myxray'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+    watchesSource: 'watches'
+    watches: 'Azure-watch'
+  
