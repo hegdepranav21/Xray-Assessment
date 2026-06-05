@@ -33,7 +33,7 @@ jobs:
        # with:
 #          node-version: "16.x"
 
-      - uses: jfrog/frogbot@v2
+      - uses: jfrog/frogbot@v3
         with:
           oidc-provider-name: hegdepranav21
           oidc-audience: hegdepranav21
